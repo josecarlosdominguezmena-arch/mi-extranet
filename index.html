@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extranet Documental Personal</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div id="login-container">
+  <h2>Iniciar Sesión</h2>
+  <input type="email" id="user" placeholder="Correo">
+  <input type="password" id="pass" placeholder="Contraseña">
+  <button onclick="entrar()">Entrar</button>
+  <p id="login-msg"></p>
+</div>
+<div id="main-container" style="display:none;">
+  <header>
+    <h1>Extranet Documental Personal</h1>
+    <div id="user-info">
+      <span id="usuario"></span> | <span id="session-num"></span> | <span id="reloj"></span>
+    </div>
+  </header>
+  <nav>
+    <button onclick="mostrarDocumentos()">Documentos</button>
+    <button onclick="mostrarHerramientas()">Herramientas</button>
+    <button onclick="logout()">Cerrar sesión</button>
+  </nav>
+  <section id="content"></section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
